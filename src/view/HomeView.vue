@@ -15,14 +15,14 @@
         Stay hungry, stay foolish.<br>  &#12288; &#12288; &#12288; &#12288; &#12288; &#12288;   &#12288; &#12288; &#12288; &#12288;    -- Steve Jobs
       </p>
 
-      <div class="flex gap-6">
-        <button class="px-8 py-4 bg-black text-white font-bold text-sm tracking-widest hover:bg-blue-600 transition-colors">
+      <!--<div class="flex gap-6">
+       <button class="px-8 py-4 bg-black text-white font-bold text-sm tracking-widest hover:bg-blue-600 transition-colors">
           查看作品
         </button>
         <button class="px-8 py-4 border-2 border-black font-bold text-sm tracking-widest hover:bg-black hover:text-white transition-colors">
           关于我
         </button>
-      </div>
+      </div>-->
     </section>
 
     <div class="w-full h-px bg-gray-200 my-20"></div>

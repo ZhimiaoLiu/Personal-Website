@@ -7,7 +7,7 @@
       <p class="text-blue-600 font-bold tracking-[0.2em] mb-6">CREATIVE DEVELOPER</p>
 
       <h1 class="text-7xl md:text-9xl font-black tracking-tighter leading-none mb-10">
-        HELLO.<br>
+        HELLO<br>
         I AM <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">LiJem</span>.
       </h1>
 

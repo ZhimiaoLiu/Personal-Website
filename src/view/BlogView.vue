@@ -1,17 +1,24 @@
 <script setup>
-import { posts } from '../data/posts.js' // 直接导入数据，不用再自己写 ref 了
+import { computed } from 'vue' // 1. 引入 computed
+import { posts } from '../data/posts.js'
+
+// 2. 创建一个计算属性，生成倒序列表
+// [...posts] 的意思是“复制一份数据”，以免直接修改原始数据
+const reversedPosts = computed(() => {
+  return [...posts].reverse()
+})
 </script>
 
 <template>
   <main class="max-w-6xl mx-auto px-6 py-20">
     <header class="mb-20 animate-fade-in">
-      <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter">WRITINGS.</h1>
-      <p class="text-gray-400 text-lg">关于技术、设计与生活的随笔。</p>
+      <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter">WRITINGS</h1>
+      <p class="text-gray-400 text-lg">Technology, Design, and Life.</p>
     </header>
 
     <div class="grid gap-12">
       <RouterLink
-          v-for="(post, index) in posts"
+          v-for="(post, index) in reversedPosts"
           :key="post.id"
           :to="`/blog/${post.id}`"
           class="group block border-t border-gray-100 pt-12 hover:border-black transition-colors duration-300"

@@ -44,17 +44,17 @@ const closeMenu = () => {
       :class="isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'"
   >
     <RouterLink to="/" @click="closeMenu" class="text-4xl font-black tracking-tighter hover:text-blue-600 transition-colors">
-      HOME.
+      HOME
     </RouterLink>
     <RouterLink to="/blog" @click="closeMenu" class="text-4xl font-black tracking-tighter hover:text-blue-600 transition-colors">
-      BLOG.
+      BLOG
     </RouterLink>
     <RouterLink to="/about" @click="closeMenu" class="text-4xl font-black tracking-tighter hover:text-blue-600 transition-colors">
-      ABOUT.
+      ABOUT
     </RouterLink>
 
     <div class="absolute bottom-10 text-xs text-gray-400 tracking-[0.2em]">
-      DESIGNED BY ZHIMIAO
+      Welcome to my website
     </div>
   </div>
 

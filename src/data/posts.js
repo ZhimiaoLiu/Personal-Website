@@ -58,16 +58,29 @@ export const posts = [
         title: 'Vibe Coding',
         date: '2024.03.4',
         category: 'CODE',
-        desc: 'Vibe Coding作为一种新的编程方式，将改变程序设计的方式...',
+        desc: 'What Is Vibe Coding?',
         image: '/images/vibe_coding.jpeg',
         content: `
-      <p class="mb-6">&#8195;Vibe Coding是什么？如果你直接Google一下的活，它会告诉你通过自然语言与AI（如Claude、GPT）对话来描述需求，让AI完成代码生成、调试和优化，开发者从“逐行编码”转变为“指导与审查”的产品经理角色。但Vibe Coding真的就是描述的这样吗？</p>
-      <p class="mb-6">&#8195;”谁都可以做出美味的食物“，——料理鼠王。</p>
-      <p class="mb-6">&#8195;2026年是一个人人都可以编程的时代，正如我上大学时和同学的构想，编程作为一个入门和精通都很困难的事情，我们努力最终的重点是做出一个人人都可以编程程序或者语言。现如今，LLM的百花齐放，使得我们的构想得以成真。当2023年OpenAI初版的时候，编程还是一个很难的事情，当时虽然可以用ChatGPT来进行代码优化，但是如何设置环境，对一个大项目进行布置还是一个连AI都很难完成的事情。但是2026年的现在已经有AI可以做到自己部署环境，布置项目，完成优化，完美的进行Vibe Coding。
+      <p class="mb-6">&#8195;If you search the term Vibe Coding on Google, you’ll find a common definition: by describing requirements through natural language conversations with AI (such as Claude or GPT), the AI takes care of code generation, debugging, and optimization. Developers shift from “line-by-line coding” to a more product-manager–like role focused on guidance and review.</p>
+      <p class="mb-6">&#8195;But is Vibe Coding really that simple?</p>
+      <p class="mb-6">&#8195;“Anyone can cook.” — Ratatouille </p>
+      <p class="mb-6">&#8195;The year 2026 marks an era in which programming is accessible to everyone. This realization echoes a vision my classmates and I once shared in college. We recognized that programming is difficult—not only to learn, but to master. Our ultimate goal was to create a programming tool or language that anyone could use, regardless of background.
       </p>
-      <p class="mb-6">&#8195;一切都非常的梦幻，编程这个高技术高门槛的职业，似乎已经自己拆掉了它那高高的围墙。我花费了一个小时体验了Unity 3D项目的Vibe Coding，结果自然是十分的流畅。AI生成的所有的语法十分通顺，几乎没有任何bug，只需输入需求然后一个简单的项目就做好了。而如果是我自己写的话，可能需要数倍的时间来完成它的工作。</p>
+      <p class="mb-6">&#8195;Today, with the rapid proliferation of large language models, that vision has become reality.</p>
       <p class="mb-6">&#8195;
-很多人会说，Vibe Coding虽然很顺畅，但是其中很多算法和语法是AI使用者没有掌握的，这是一种很大的风险。但我认为这完全没有必要担心。就像富士康的工人完全不懂芯片的原理一样，Vibe Coding可以让每个人组装自己的“iPhone”。这大大的提高了想法->产品的出产率。Jobs并不是资深技术人员，但是他却设计出来非凡的产品。</p>
+When OpenAI released its first major model in 2023, programming was still demanding. While tools like ChatGPT could help optimize code, setting up environments, configuring dependencies, and deploying large-scale projects remained challenging—even for AI. But in 2026, AI systems can autonomously deploy environments, configure projects, perform optimizations, and execute workflows with remarkable reliability. Vibe Coding is no longer an experiment; it is a seamless experience.</p>
+      <p class="mb-6">&#8195;It feels almost surreal.</p>
+      <p class="mb-6">&#8195;Programming, once considered a high-skill, high-barrier profession, seems to have dismantled its own formidable walls. I recently spent an hour experimenting with Vibe Coding on a Unity 3D project. The experience was astonishingly smooth. The AI-generated syntax was precise, with virtually no bugs. By simply describing my requirements, I received a fully functional project. Had I written the same project myself, it likely would have taken several times longer.</p>
+
+      <p class="mb-6">&#8195;Vibe Coding does not merely improve efficiency—it redefines it.</p>
+
+      <p class="mb-6">&#8195;Some critics argue that although Vibe Coding works smoothly, users may not understand the underlying algorithms or syntax, which could pose long-term risks. I believe this concern is overstated.</p>
+
+      <p class="mb-6">&#8195;After all, assembly-line workers at Foxconn do not need to understand semiconductor physics to build an iPhone. Vibe Coding empowers anyone to assemble their own “iPhone”—to transform ideas into products at unprecedented speed. It dramatically shortens the distance between imagination and execution.</p>
+
+      <p class="mb-6">&#8195;Steve Jobs was not primarily an engineer, yet he designed extraordinary products by focusing on vision, direction, and refinement.</p>
+
+      <p class="mb-6">&#8195;Perhaps that is the true essence of Vibe Coding: not replacing programmers, but elevating human creativity above mechanical implementation.</p>
     `
     }
 ]

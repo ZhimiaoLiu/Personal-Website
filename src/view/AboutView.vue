@@ -79,7 +79,7 @@ const skills = ['Java', 'JavaScript', 'UI/UX DESIGN', 'C++', 'C', 'Python', 'Uni
 
           <div class="md:col-span-4 pl-8 md:pl-0">
             <h3 class="text-2xl font-bold mb-2">Undergraduate School of Computer Science </h3>
-            <div class="text-sm font-bold tracking-widest text-blue-600 mb-4">Virginia Tech + Coventry University</div>
+            <div class="text-sm font-bold tracking-widest text-blue-600 mb-4">Virginia Tech</div>
             <p class="text-gray-500">Studied in computer science, tough days but learned a lot.</p>
           </div>
 

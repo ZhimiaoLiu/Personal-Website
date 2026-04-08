@@ -48,8 +48,8 @@ const skills = ['Java', 'JavaScript', 'UI/UX DESIGN', 'C++', 'C', 'Python', 'Uni
           <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-black group-hover:border-blue-600 transition-colors md:hidden"></div>
 
           <div class="md:col-span-4 pl-8 md:pl-0">
-            <h3 class="text-2xl font-bold mb-2">IT Engineer at Shima Seiki </h3>
-            <div class="text-sm font-bold tracking-widest text-blue-600 mb-4">Shima Seki Co.</div>
+            <h3 class="text-2xl font-bold mb-2">IT Engineer</h3>
+            <div class="text-sm font-bold tracking-widest text-blue-600 mb-4">メーカー</div>
             <p class="text-gray-500">New 社員</p>
           </div>
         </div>

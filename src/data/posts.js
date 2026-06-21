@@ -3,7 +3,7 @@ export const posts = [
     {
         id: 1,
         title: '为什么极简主义永不过时？',
-        date: '2024.02.14',
+        date: '2026.02.14',
         category: 'DESIGN',
         desc: '少即是多。在信息过载的时代，如何通过留白和排版传达更有力的信息...',
         image: 'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=2000&auto=format&fit=crop',
@@ -18,7 +18,7 @@ export const posts = [
     {
         id: 2,
         title: 'Vue 3 + Tailwind v4 开发体验',
-        date: '2024.02.10',
+        date: '2026.02.10',
         category: 'CODE',
         desc: '刚刚升级了最新的技术栈，Tailwind v4 的配置简直太丝滑了...',
         image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2000&auto=format&fit=crop',
@@ -31,7 +31,7 @@ export const posts = [
     {
         id: 3,
         title: 'Vibe Coding',
-        date: '2024.03.4',
+        date: '2026.03.4',
         category: 'CODE',
         desc: 'What Is Vibe Coding?',
         image: '/images/vibe_coding.jpeg',
@@ -56,6 +56,20 @@ When OpenAI released its first major model in 2023, programming was still demand
       <p class="mb-6">&#8195;Steve Jobs was not primarily an engineer, yet he designed extraordinary products by focusing on vision, direction, and refinement.</p>
 
       <p class="mb-6">&#8195;Perhaps that is the true essence of Vibe Coding: not replacing programmers, but elevating human creativity above mechanical implementation.</p>
+    `
+    },
+
+    {
+        id: 4,
+        title: 'Pressure',
+        date: '202',
+        category: 'Reflection',
+        desc: 'I Maintain Mine',
+        image: '/images/pressure.jpeg',
+        content: `
+      <p class="mb-6">&#8195;A great war movie is never about how bloody the fighting can be — it's about the struggle within the human heart. In this film, ninety-five percent of the runtime has no blood and no explosions; it's all about people making the right choices. And here is what matters most: as the one in command, can you make the right decision when you don't have the information you need, while the clock keeps ticking? Can you hold your position when everyone around you is questioning it? </p>
+      <p class="mb-6">&#8195;Even if you never stand somewhere as critical as a commander, it still matters to keep a clear head and hold your own ground. Once you reach a conclusion you believe is right, you should stand by it to the very end. This is the best quality anyone can have.</p>
+      <p class="mb-6">&#8195;Pressure is not a bad thing. It was exactly that pressure that made D-Day a success. When you feel pressure, it means only one thing: you are about to succeed, or about to become a better version of yourself.</p>
     `
     }
 ]

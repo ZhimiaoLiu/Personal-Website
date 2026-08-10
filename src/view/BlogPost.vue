@@ -1,12 +1,23 @@
 <script setup>
-import {useRoute, RouterLink} from 'vue-router'
-import {computed, ref, onMounted} from 'vue' // 引入所需的 vue 功能
-import {posts} from '../data/posts.js'
-import {supabase} from '../lib/supabaseClient.js' // 引入你的云端数据库
+import { useRoute, RouterLink } from 'vue-router'
+import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
+import { posts } from '../data/posts.js'
+import { supabase } from '../lib/supabaseClient.js'
+
+const scrollProgress = ref(0)
+const onScroll = () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight
+  scrollProgress.value = h > 0 ? (window.scrollY / h) * 100 : 0
+}
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
+})
+onUnmounted(() => window.removeEventListener('scroll', onScroll))
 
 const route = useRoute()
 
-// 1. 根据 URL 查找对应的文章
+// 1. 根据 URL 查找对应的文章 
 const post = computed(() => {
   return posts.find(p => p.id == Number(route.params.id))
 })
@@ -18,57 +29,34 @@ const isSyncing = ref(false)
 // 2. 从 Supabase 获取真实点赞数
 const fetchLikes = async () => {
   if (!post.value) return
-
-  // 💡 技巧 1：用 maybeSingle() 代替 single()
-  // 这样如果数据库里还没这篇文章，它不会报错，只会默默返回 null
-  const {data, error} = await supabase
-      .from('posts_likes')
-      .select('count')
-      .eq('post_id', post.value.id)
-      .maybeSingle()
-
-  if (data) {
-    currentLikes.value = data.count
-  } else {
-    // 💡 技巧 2：如果没有数据，说明是新文章，默认点赞设为 0
-    currentLikes.value = 0
-  }
+  const { data } = await supabase
+    .from('posts_likes')
+    .select('count')
+    .eq('post_id', post.value.id)
+    .maybeSingle()
+  currentLikes.value = data?.count ?? 0
 }
 
-// 3. 点击按钮，更新或自动创建云端数据
+// 写：调 RPC，返回值就是最新的数字
 const handleLike = async () => {
   if (isSyncing.value || !post.value) return
   isSyncing.value = true
 
-  // 乐观更新：页面瞬间 +1
-  currentLikes.value++
-
-  // 💡 技巧 3：使用 upsert (有则更新，无则创建)
-  const {error} = await supabase
-      .from('posts_likes')
-      .upsert(
-          {
-            post_id: post.value.id,
-            count: currentLikes.value
-          },
-          {
-            onConflict: 'post_id' // 告诉数据库，如果 post_id 重复了，就只更新 count
-          }
-      )
-
-  if (error) {
-    // 如果网络出问题，悄悄减回去
-    currentLikes.value--
-    console.error('点赞同步失败:', error)
-  }
+  const { data, error } = await supabase.rpc('increment_likes', { pid: post.value.id })
+  if (error) console.error('点赞失败:', error)
+  else currentLikes.value = data
 
   isSyncing.value = false
 }
 
+watch(() => route.params.id, fetchLikes, { immediate: true })
 // 4. 页面一加载就去取点赞数
-onMounted(() => {
+/*onMounted(() => {
+  watch(() => route.params.id, fetchLikes)
   fetchLikes()
-})
+  
+})*/
+
 </script>
 
 <template>

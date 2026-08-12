@@ -3,6 +3,7 @@ import { useRoute, RouterLink } from 'vue-router'
 import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
 import { posts } from '../data/posts.js'
 import { supabase } from '../lib/supabaseClient.js'
+import PhotoGallery from '@/components/PhotoGallery.vue'
 
 const scrollProgress = ref(0)
 const onScroll = () => {
@@ -84,7 +85,10 @@ watch(() => route.params.id, fetchLikes, { immediate: true })
         <img :src="post.image"
              class="w-full aspect-video object-cover mb-16 grayscale hover:grayscale-0 transition-all duration-700">
 
-        <div class="prose prose-lg prose-slate mx-auto" v-html="post.content"></div>
+        <div v-if="post.intro" v-html="post.intro" class="post_intro"></div>
+
+        <PhotoGallery v-if="post.type === 'gallery'" :photos="post.photos" />
+        <div v-else v-html="post.content" class="post_content"></div>
 
         <div class="max-w-prose mx-auto mt-12 flex justify-end">
           <button

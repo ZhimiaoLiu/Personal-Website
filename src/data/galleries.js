@@ -6,9 +6,9 @@ const modules = import.meta.glob(
 
 // 可选：给某几张写说明，key 用文件名，没写的就没有 caption
 const captions = {
-  'IMG_4036.jpg': '和歌山，花',
-  'MG_4036.jpg': 'kagami',
-  'MG_4054.jpg': '二人',
+  'IMG_4036.jpg': 'Tyy送的花',
+  'IMG_4036.jpg': '好可爱的kagami',
+  'IMG_4054.jpg': '自拍',
 }
 
 export const aug2026 = Object.entries(modules)

@@ -94,7 +94,7 @@ When OpenAI released its first major model in 2023, programming was still demand
     date: '2026.10.05',
     category: 'Reflection',
     desc: 'Is Odysseus a Hero...',
-    image: '/images/odyssey.jpeg',
+    image: '/images/odyssey.jpg',
     content: `
       <p class="mb-6">&#8195;As it happens, The Odyssey is the tenth Christopher Nolan film I've seen. Overall, it's a first-rate blockbuster. It trims away much of the detail in Homer's epic, yet the story stays coherent and flows effortlessly from beginning to end. The costumes are larger than life and show how warriors dressed at the height of the Bronze Age. If you can catch it in IMAX, it's a true feast for the eyes. </p>
       <p class="mb-6">&#8195;Visuals and music aside, the film's theme is homecoming. Its subtext, though, is strikingly close to that of Nolan's previous film, Oppenheimer. What stands out most is its reflection on human nature, and above all its depiction of the cruelty of war. The film opens with a bard hailing Odysseus as a war hero. But is he really a hero? I don't think so. He is simply a commander, a brave and clever one. His Trojan Horse merely wrote the ending of a ten-year war, an ending in which the invaders emerged victorious. As with the bomb in Oppenheimer, ending a war does not by itself make the man behind it a hero. The film may look like a story about going home, but at its heart it is Odysseus's journey to find himself.</p>

@@ -1,6 +1,7 @@
 // src/data/posts.js
 
 import { aug2026 } from './galleries'
+import { oct2026 } from './galleries'
 
 export const posts = [
   {
@@ -101,5 +102,16 @@ When OpenAI released its first major model in 2023, programming was still demand
       <p class="mb-6">&#8195;In the film, every decision is Odysseus's alone. More than once his men disagree with him, and each time he stands by his own decision. After the fall of Troy, he is convinced he is the hero who saved the allied Greek forces. Proud and arrogant, he even believes he can defy the gods and change the fate laid out for him. Yet the harder he tries, the farther he drifts from home, and the more of his men die needless deaths. In the end, he is the only one who makes it home, and the price is an entire generation of Ithaca's young men.</p>
       <p class="mb-6">&#8195;"With great power comes great responsibility." But most of us are not heroes, and we have no right to decide the fates of others. We tend to want to be the savior, or else to wait for one to come and save us. The truth is that even a man as mighty as Odysseus can master only his own fate, and he comes home alone.</p>
     `
+  },
+      {
+    id: 7,
+    type: 'gallery',              // 关键字段
+    title: '十月生活集锦',
+    date: '2026.08.12',
+    category: 'LIFE',
+    desc: '和TYY的每一天都好幸福呀☺️...',
+    image: oct2026[0].src,        // 封面直接复用第一张
+    intro: `<p class="mb-6">属于我们的回忆～</p>`,
+    photos: oct2026,
   },
 ]

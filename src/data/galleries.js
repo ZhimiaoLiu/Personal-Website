@@ -1,6 +1,10 @@
 // src/data/galleries.js
-const modules = import.meta.glob(
+const modules08 = import.meta.glob(
   '../assets/photos/2026-08/*.{jpg,jpeg,png,webp}',
+  { eager: true, import: 'default' }
+)
+const modules10 = import.meta.glob(
+  '../assets/photos/2026-10/*.{jpg,jpeg,png,webp}',
   { eager: true, import: 'default' }
 )
 
@@ -11,7 +15,14 @@ const captions = {
   'IMG_4054.jpg': '自拍',
 }
 
-export const aug2026 = Object.entries(modules)
+export const aug2026 = Object.entries(modules08)
+  .sort(([a], [b]) => a.localeCompare(b))   // 靠文件名 01/02/03 排序
+  .map(([path, src]) => {
+    const name = path.split('/').pop()
+    return { src, caption: captions[name] }
+  })
+
+export const oct2026 = Object.entries(modules10)
   .sort(([a], [b]) => a.localeCompare(b))   // 靠文件名 01/02/03 排序
   .map(([path, src]) => {
     const name = path.split('/').pop()
